@@ -11,9 +11,8 @@ h2 {
 }
 
 p {
-    text-align: center;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 /* Contenido */
@@ -26,7 +25,7 @@ body {
 
 .container {
     display: flex;
-    width: 90%;
+    width: 95%;
     margin: auto;
     justify-content: space-around;
 }
@@ -34,7 +33,7 @@ body {
 /* drop de imagenes */
 .container-drop {
     margin-top: 50px;
-    width: 60%;
+    width: 50%;
     height: 500px;
 }
 
@@ -43,7 +42,7 @@ body {
     box-shadow: -2px -1px 50px -4px #528565;
     background-image: url("/images/drop.png");
     background-size: cover;
-    height: 400px;
+    height: 350px;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -56,15 +55,14 @@ body {
     justify-content: center;
     color: white;
     display: flex;
-    align-items: center;
     flex-direction: column;
     margin-top: 20px;
-    width: 30%;
+    width: 25%;
     height: 400px;
 }
 
 .login p {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     border-bottom: 1px solid white;
 }
 
@@ -73,9 +71,36 @@ body {
 .btn-drop{
     width: 100%;
     background-color: #569b51;
-    margin-top: 40px;
+    margin-top: 60px;
     border: none;
     height: 35px;
     border-radius: 5px;
-    
+    color: white;
+    font-weight: 400;
+} 
+   /* Boton Login */ 
+
+   .icon-login{
+    display: flex;
+    margin: auto;
+   }
+   .btn-login{
+    background-color: var(--main-bg-color);
+    border: solid white 1px;
+    color: white;
+    width: 100%;
+    padding: 9px 0;
+    font-size: 13px;
+    margin-top: 30px;
+    border-radius: 5px;
+    text-align: center;
+    background-image: url('/images/google.png');
+    background-position: 5%;
+    background-size: 12%;
+    background-repeat: no-repeat;
+}
+
+.img-google{
+display: flex;
+justify-content: flex-start;
 }

@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -17,23 +16,24 @@
 <body>
     <div class="container">
         <!-- Example of a form that Dropzone can take over -->
-        <div class="container-drop">
-        <form action="/target" class="dropzone drop"></form>
-        <button class="btn-drop" >pulsa</button>
-        </div>
-        <div class="login">
+        <section class="container-drop">
+        <form  id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);" class="dropzone drop"></form>
+        <button class="btn-drop" >Subir archivos</button>
+        </section>
+
+        <section class="login">
             <h2>Bienvenido a DDrop</h2>
             <p>Para subir tus archivos de forma simple a drive, puedes hacer Login a través de Google</p>
-            <button>Google</button>
-        </div>
+            <button class="btn-login "> Login con Google
+            </button>
+        </section>
 
     </div>
     <footer>
 
     </footer>
-    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/987d9b543c.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="/js/main.js"></script>
 </body>
 
