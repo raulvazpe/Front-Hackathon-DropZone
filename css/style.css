@@ -1,0 +1,81 @@
+:root {
+    --main-bg-color: #130f26;
+}
+
+
+/* Textos */
+h2 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+p {
+    text-align: center;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+/* Contenido */
+body {
+    background-color: var(--main-bg-color);
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+
+.container {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+}
+
+/* drop de imagenes */
+.container-drop {
+    margin-top: 50px;
+    width: 60%;
+    height: 500px;
+}
+
+.drop {
+    -webkit-box-shadow: -2px -1px 50px -4px #528565;
+    box-shadow: -2px -1px 50px -4px #528565;
+    background-image: url("/images/drop.png");
+    background-size: cover;
+    height: 400px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* login */
+.login {
+    justify-content: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 30%;
+    height: 400px;
+}
+
+.login p {
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+}
+
+/* BOTONES */
+/* Boton drop */
+.btn-drop{
+    width: 100%;
+    background-color: #569b51;
+    margin-top: 40px;
+    border: none;
+    height: 35px;
+    border-radius: 5px;
+    
+}
