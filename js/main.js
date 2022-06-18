@@ -34,7 +34,7 @@ dropArea.addEventListener("dragleave", (e) => {
 //Cuando soltemos el archivo en la zona
 dropArea.addEventListener("drop", (e) => { 
     e.preventDefault();
-    files = e.DataTransfer.files;
+    files = e.dataTransfer.files;
     showFiles(files);
     dropArea.classList.remove("active");
     dragText.textContent = "Arrastra tus files aqui!"
@@ -43,7 +43,7 @@ dropArea.addEventListener("drop", (e) => {
 
 
 function showFiles(files) { //identificamos si es 1 imagen o hay varias
-    if (files.lenght === undefined) {
+    if (files.lenght < 2) {
         processFile(files);
     } else {
         for (const file of files) {
@@ -55,12 +55,13 @@ function showFiles(files) { //identificamos si es 1 imagen o hay varias
 
 function processFile(file) {//validamos la imagen
     const tipo = file.type;
-    const validas = ['image/jpeg', 'image/jpg', 'image/png','image/gif'] ;
+    const extensionesValidas = ['image/jpeg', 'image/jpg', 'image/png','image/gif'] ;
 
-    if(validas.includes(tipo)){
+    if(extensionesValidas.includes(tipo)){
         //archivo valido
     }else{
         //mostrar error
+        console.log(tipo);
         alert('el archivo no es valido');
     }
  }
