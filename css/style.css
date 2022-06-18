@@ -49,6 +49,10 @@ body {
     justify-content: center;
 }
 
+.active{
+    filter: brightness(1.5);
+    transition: 0.5s;
+}
 
 /* login */
 .login {

@@ -1,43 +1,66 @@
+const dropArea = document.querySelector('.drop');
+const dragText = dropArea.querySelector('h2');
+const button = document.querySelector('.btn-drop');
+const input = dropArea.querySelector('#input-file');
 
-//CAMBIAMOS EL TEXTO POR DEFECTO 
-// $(document).ready(function(){
-//     $('.dz-button').html('ARRASTRA TUS ARCHIVOS AQUÍ')
-//     $('.dz-button').css({
-//         "color": "white",
-//         "font-family": 'Open Sans',
-//         "font-size": '25px'
-//         });
-  
-    
-// })
+let files;
 
-function dropHandler(ev) {
-    console.log('File(s) dropped');
-  
-    // Impedir o comportamento padrão (impedir que o arquivo seja aberto)
-    ev.preventDefault();
-  
-    if (ev.dataTransfer.items) {
-      // Use a interface DataTransferItemList para acessar o (s) arquivo (s)
-      for (var i = 0; i < ev.dataTransfer.items.length; i++) {
-        // Se os itens soltos não forem arquivos, rejeite-os
-        if (ev.dataTransfer.items[i].kind === 'file') {
-          var file = ev.dataTransfer.items[i].getAsFile();
-          console.log('... file[' + i + '].name = ' + file.name);
-        }
-      }
+button.addEventListener('click', e => {
+    console.log("click");
+});
+
+//Cada vez que cambia un archivo aplica la clase
+input.addEventListener("change", (e) => { 
+    files = this.files
+    dropArea.classList.add("active");
+    showFiles(files);
+    dropArea.classList.remove("active");
+})
+
+//Cuando arrastremos dentro de la zona
+dropArea.addEventListener("dragover", (e) => { 
+    e.preventDefault();
+    dropArea.classList.add("active")
+    dragText.textContent = "Arrastra tus files aqui!"
+
+})
+//Cuando arrastremos fuera de la zona
+dropArea.addEventListener("dragleave", (e) => { 
+    e.preventDefault();
+    dropArea.classList.remove("active");
+    dragText.textContent = "Arrastra tus files aqui!"
+})
+
+//Cuando soltemos el archivo en la zona
+dropArea.addEventListener("drop", (e) => { 
+    e.preventDefault();
+    files = e.DataTransfer.files;
+    showFiles(files);
+    dropArea.classList.remove("active");
+    dragText.textContent = "Arrastra tus files aqui!"
+
+})
+
+
+function showFiles(files) { //identificamos si es 1 imagen o hay varias
+    if (files.lenght === undefined) {
+        processFile(files);
     } else {
-      // Use a interface DataTransfer para acessar o (s) arquivo (s)
-      for (var i = 0; i < ev.dataTransfer.files.length; i++) {
-        console.log('... file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
-      }
+        for (const file of files) {
+            processFile(file);
+        }
     }
-  }
+}
 
 
-  function dragOverHandler(ev) {
-    console.log('File(s) in drop zone');
-  
-    // Impedir o comportamento padrão (impedir que o arquivo seja aberto)
-    ev.preventDefault();
-  }
+function processFile(file) {//validamos la imagen
+    const tipo = file.type;
+    const validas = ['image/jpeg', 'image/jpg', 'image/png','image/gif'] ;
+
+    if(validas.includes(tipo)){
+        //archivo valido
+    }else{
+        //mostrar error
+        alert('el archivo no es valido');
+    }
+ }
