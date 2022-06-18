@@ -40,7 +40,7 @@ body {
 .drop {
     -webkit-box-shadow: -2px -1px 50px -4px #528565;
     box-shadow: -2px -1px 50px -4px #528565;
-    background-image: url("images/drop.png");
+    background-image: url("/images/drop.png");
     background-size: cover;
     height: 350px;
     border-radius: 5px;
@@ -98,7 +98,7 @@ body {
     margin-top: 30px;
     border-radius: 5px;
     text-align: center;
-    background-image: url('images/google.png');
+    background-image: url('/images/google.png');
     background-position: 5%;
     background-size: 12%;
     background-repeat: no-repeat;
