@@ -77,19 +77,17 @@ function processFile(file) {//validamos la imagen
 function listarArchivos(estado,nombre){
     if(estado){
     
-// Create an "li" node:
-const lista = document.createElement("li");
+// Create an "p" node:
+const parrafo = document.createElement("p");
 
 // Create a text node:
 const text = document.createTextNode(nombre);
 
-// Append the text node to the "li" node:
-lista.appendChild(text);
+// Append the text node to the "p" node:
+parrafo.appendChild(text);
 
-// Append the "li" node to the list:
-document.getElementById("listaArchivos").appendChild(lista);
-
-
+// Append the "p" node to the list:
+document.getElementById("listaArchivos").appendChild(parrafo);
 
 dragText.style.display="none";
 
@@ -105,6 +103,7 @@ function error(estado){
 
     if (estado) {
         dragText.style.display="none";
+        document.getElementById("listaArchivos").style.display = "none";
         document.getElementById("divError").style.display = "block"; 
         
     } else {
