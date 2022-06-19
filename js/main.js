@@ -36,7 +36,7 @@ dropArea.addEventListener("drop", (e) => {
     e.preventDefault();
     files = e.dataTransfer.files;
     //tipo = file.type
-    //console.log(tipo)
+    console.log(files[0].type)
     showFiles(files);
     dropArea.classList.remove("active");
     dragText.textContent = "Suelta tus archivos aqui!"
