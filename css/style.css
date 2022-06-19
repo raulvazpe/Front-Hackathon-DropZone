@@ -4,16 +4,16 @@
 
 
 /* Textos */
-h2,h3 {
+h2,
+h3 {
     text-align: center;
-    font-weight: 400;
     font-size: 25px;
     color: white;
 }
 
 p {
     font-weight: 300;
-    font-size: 15px;
+    font-size: 2vh;
 }
 
 /* Contenido */
@@ -31,6 +31,9 @@ body {
     justify-content: space-around;
 }
 
+/*-------------------- DROPZONE------------------ */
+
+ 
 /* drop de imagenes */
 .container-drop {
     margin-top: 50px;
@@ -42,8 +45,8 @@ body {
 }
 
 .drop {
-    -webkit-box-shadow: -2px -1px 50px -4px #528565;
-    box-shadow: -2px -1px 50px -4px #528565;
+    -webkit-box-shadow: -2px -1px 50px -4px #47af6d;
+    box-shadow: -2px -1px 50px -4px #47af6d;
     background-image: url("../images/drop.png");
     background-size: cover;
     height: 350px;
@@ -52,113 +55,16 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-}
-
-#divError {
-    display: none;
-}
-
-.div-error {
-    color: white;
-    text-align: center;
-    margin: auto;
-    height: 200px;
-    width: 70%;
-    background-color: #14151F;
     border: white solid 1px;
-    border-radius: 5px;
-}
-
-.div-error button {
-    width: 30%;
-    background-color: #569b51;
-    margin-top: 20px;
-    border: none;
-    height: 35px;
-    border-radius: 5px;
-    color: white;
-    font-weight: 400;
-}
-
-#listaArchivos {
-    display: flex;
-    flex-direction: column;
-}
-
-/* SUCCESS */
-#success{
-    display: none;
-
 }
 
 
-    .wrapper {
-        flex-direction: column;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    .checkmark__circle {
-        stroke-dasharray: 166;
-        stroke-dashoffset: 166;
-        stroke-width: 2;
-        stroke-miterlimit: 10;
-        stroke: #7ac142;
-        fill: none;
-        animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards
-    }
-
-    .checkmark {
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        display: block;
-        stroke-width: 2;
-        stroke: #fff;
-        stroke-miterlimit: 10;
-        margin: 10% auto;
-        box-shadow: inset 0px 0px 0px #7ac142;
-        animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both
-    }
-
-    .checkmark__check {
-        transform-origin: 50% 50%;
-        stroke-dasharray: 48;
-        stroke-dashoffset: 48;
-        animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards
-    }
-
-    @keyframes stroke {
-        100% {
-            stroke-dashoffset: 0
-        }
-    }
-
-    @keyframes scale {
-
-        0%,
-        100% {
-            transform: none
-        }
-
-        50% {
-            transform: scale3d(1.1, 1.1, 1)
-        }
-    }
-
-    @keyframes fill {
-        100% {
-            box-shadow: inset 0px 0px 0px 30px #7ac142
-        }
-    }
 
 
-.active {
-    filter: brightness(1.5);
-    transition: 0.5s;
-}
+
+
+
+
 
 /* login */
 .login {
@@ -176,17 +82,91 @@ body {
     border-bottom: 1px solid white;
 }
 
-/* BOTONES */
+/*--------------------- INICIO DE SESION PAGINA------------------------- */
+
+.inicio-sesion {
+    margin-top: 60px;
+    background-image: url("../images/drop.png");
+    background-size: cover;
+    width: 40%;
+    border-radius: 5px;
+    border: 1px solid white;
+    -webkit-box-shadow: -2px -1px 50px -4px #47af6d;
+    box-shadow: -2px -1px 50px -4px #47af6d;
+
+}
+.inicio-sesion form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inicio-sesion h2 {
+    margin-bottom: 0;
+    margin-top: 30px;
+    font-size: 4vh;
+}
+
+.inicio-sesion  label {
+    font-size: 2vh;
+    color: white;
+    width: 50%;
+    padding: 6px;
+    margin-top: 20px;
+}
+
+
+.inicio-sesion input {
+    background-color: var(--main-bg-color);
+    border: solid white 1px;
+    color: white;
+    width: 50%;
+    height: 4vh;
+    font-size: 13px;
+    border-radius: 5px;
+    text-align: left;
+    padding-left:10px;
+}
+.inicio-sesion input:hover {
+
+    transition: 0.5s;
+    -webkit-box-shadow: -2px -1px 50px -4px #528565;
+    box-shadow: -2px -1px 50px -4px #528565;
+}
+.inicio-sesion p {
+color: white;
+
+}
+p spam{
+    color: green;
+}
+/*--------------------- BOTONES------------------------- */
 /* Boton drop */
 .btn-drop {
     width: 100%;
     background-color: #569b51;
     margin-top: 60px;
     border: none;
+    height: 38px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+ /* boton Inicio sesion */
+
+.btn-InicioSesion{
+    width: 50%;
+    background-color: #569b51;
+    margin-top: 30px;
+    border: none;
     height: 35px;
     border-radius: 5px;
     color: white;
     font-weight: 400;
+    font-size: 2.5vh;
+    cursor: pointer;
 }
 
 /* Boton Login */
@@ -201,7 +181,7 @@ body {
     border: solid white 1px;
     color: white;
     width: 100%;
-    padding: 9px 0;
+    height: 38px;
     font-size: 13px;
     margin-top: 30px;
     border-radius: 5px;
@@ -210,9 +190,171 @@ body {
     background-position: 5%;
     background-size: 12%;
     background-repeat: no-repeat;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+
+    transition: 0.5s;
+    -webkit-box-shadow: -2px -1px 50px -4px #528565;
+    box-shadow: -2px -1px 50px -4px #528565;
+
 }
 
 .img-google {
     display: flex;
     justify-content: flex-start;
+
 }
+ /* Boton error */
+.div-error button {
+    width: 30%;
+    background-color: #569b51;
+    margin-top: 20px;
+    border: none;
+    height: 35px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.div-error button:hover {
+    transition: 0.2s;
+    width: 32%;
+    height: 36px;
+    background-color: #58be51;
+}
+
+/* DIVS DINAMICOS */
+
+/* listado de archivos */
+#listaArchivos {
+    display: flex;
+    flex-direction: column;
+}
+
+/* SUCCESS */
+#success {
+    display: none;
+
+}
+
+
+.wrapper {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards
+}
+
+.checkmark {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 10% auto;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: none
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1)
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #7ac142
+    }
+}
+
+
+.active {
+    filter: brightness(1.5);
+    transition: 0.5s;
+}
+
+
+/* DIv error */
+
+#divError {
+    display: none;
+}
+
+.div-error {
+    color: white;
+    text-align: center;
+    margin: auto;
+    height: 200px;
+    width: 70%;
+    background-color: #14151F;
+    border: white solid 1px;
+    border-radius: 5px;
+}
+
+
+/* MEIDA QUIERIES */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    
+    .login {
+        width: 80%;
+        margin-bottom: 45px;
+        margin-top: -34px;
+        height: 300px;
+    }
+
+    .container-drop{
+    width: 80%;
+    margin-top: 50px;
+}
+
+
+.btn-login {
+
+    background-size: 8%;
+
+}
+} 

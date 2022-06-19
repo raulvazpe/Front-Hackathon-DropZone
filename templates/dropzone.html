@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="container">
+       
+        <section class="container-drop">
+            <div class="dropzone drop">
+                <h2 id="textoDrop"></h2>
+                <!-- LISTADO ARCHIVOS DIV -->
+                <div id="listaArchivos">
+
+                </div>
+                <!-- SUCCESS DIV -->
+                <div id="success" class="wrapper">
+                    <h3>Se ha enviado correctamente</h3>
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                    
+                </div>
+                <!-- ERROR DIV -->
+                <div id="divError" class="div-error">
+                    <h3>Ups, algo ha ido mal</h3>
+                    <p>No hemos podido subir tu archivo, revisa el formato o bien inténtalo de nuevo</p>
+                    <button onclick="error(false)">Cerrar</button>
+                </div>
+                <input type="file" id="input-file" hidden multiple />
+            </div>
+            <button class="btn-drop" onclick="subirArchivos()">Subir archivos</button>
+
+        </section>
+
+        <section class="login">
+            <h2>Bienvenido a DDrop</h2>
+            <p>Para subir tus archivos de forma simple a drive, puedes hacer Login a través de Google</p>
+            <button class="btn-login "> Login con Google
+            </button>
+        </section>
+
+    </div>
+    <footer>
+
+    </footer>
+    <script src="https://kit.fontawesome.com/987d9b543c.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
