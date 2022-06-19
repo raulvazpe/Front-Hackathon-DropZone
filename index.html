@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,12 +17,31 @@
     <div class="container">
         <!-- Example of a form that Dropzone can take over -->
         <section class="container-drop">
-        <div class="dropzone drop">
-            <h2></h2>
-            <input type="file" id="input-file" hidden multiple/>
-        </div>
-        <button class="btn-drop" >Subir archivos</button>
-        
+            <div class="dropzone drop">
+                <h2 id="textoDrop"></h2>
+                <!-- LISTADO ARCHIVOS DIV -->
+                <div id="listaArchivos">
+
+                </div>
+                <!-- SUCCESS DIV -->
+                <div id="success" class="wrapper">
+                    <h3>Se ha enviado correctamente</h3>
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                    
+                </div>
+                <!-- ERROR DIV -->
+                <div id="divError" class="div-error">
+                    <h3>Ups, algo ha ido mal</h3>
+                    <p>No hemos podido subir tu archivo, revisa el formato o bien inténtalo de nuevo</p>
+                    <button onclick="error(false)">Cerrar</button>
+                </div>
+                <input type="file" id="input-file" hidden multiple />
+            </div>
+            <button class="btn-drop" onclick="subirArchivos()">Subir archivos</button>
+
         </section>
 
         <section class="login">

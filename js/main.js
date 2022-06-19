@@ -1,9 +1,12 @@
+//const { getElement } = require("dropzone");
+const divError = document.querySelector("#divError");
 const dropArea = document.querySelector('.drop');
 const dragText = dropArea.querySelector('h2');
 const button = document.querySelector('.btn-drop');
 const input = dropArea.querySelector('#input-file');
 
 let files;
+let archivo= false;
 
 button.addEventListener('click', e => {
     console.log("click");
@@ -35,8 +38,7 @@ dropArea.addEventListener("dragleave", (e) => {
 dropArea.addEventListener("drop", (e) => { 
     e.preventDefault();
     files = e.dataTransfer.files;
-    //tipo = file.type
-    console.log(files[0].type)
+    //console.log(files[0].name)
     showFiles(files);
     dropArea.classList.remove("active");
     dragText.textContent = "Suelta tus archivos aqui!"
@@ -44,14 +46,13 @@ dropArea.addEventListener("drop", (e) => {
 })
 
 
-function showFiles(files) { //identificamos si es 1 imagen o hay varias
-    if (files.lenght === undefined) {
-        console.log('un archivo')
-        processFile(files); //procesa un archivo
+function showFiles(files) { //identificamos si hay mas de una imagen
+    if (files["length"] === 1) {
+        processFile(files[0]); //procesa un archivo
     } else {
-        for (const file of files) { //procesa el array
-            console.log('mas de uno')
+        for (const file of files) { //procesa el array         
             processFile(file);
+           // console.log(file.name)
         }
     }
 }
@@ -62,9 +63,64 @@ function processFile(file) {//validamos la imagen
     const validExtensions = ['image/jpeg', 'image/jpg', 'image/png','image/gif'] ;
     if(validExtensions.includes(docType)){
         //archivo valido
+        archivo = true;
+        console.log(file.name)
+        listarArchivos(true,file.name);
     }else{
         //mostrar error
-       
-        alert('el archivo no es valido');
+        //alert('el archivo no es valido');
+        error(true);
     }
- }
+}
+
+//DIV LISTADO DE ARCHIVOS
+function listarArchivos(estado,nombre){
+    if(estado){
+    
+// Create an "li" node:
+const lista = document.createElement("li");
+
+// Create a text node:
+const text = document.createTextNode(nombre);
+
+// Append the text node to the "li" node:
+lista.appendChild(text);
+
+// Append the "li" node to the list:
+document.getElementById("listaArchivos").appendChild(lista);
+
+
+
+dragText.style.display="none";
+
+        document.getElementById("listaArchivos").style.color = "white";
+    }else{
+        document.getElementById("listaArchivos").style.display = "none";
+    }
+}
+
+
+//DIV DE ERROR
+function error(estado){ 
+
+    if (estado) {
+        dragText.style.display="none";
+        document.getElementById("divError").style.display = "block"; 
+        
+    } else {
+        document.getElementById("divError").style.display = "none";
+        dragText.style.display="block";
+        dragText.textContent = ""
+    }
+}
+
+
+function subirArchivos(){
+    if(archivo){
+        document.getElementById("listaArchivos").style.display = "none";
+        dragText.style.display="none";
+        document.getElementById("success").style.display = "block"; 
+    }else{
+       error(true);
+    }
+}

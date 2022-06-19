@@ -4,10 +4,11 @@
 
 
 /* Textos */
-h2 {
+h2,h3 {
     text-align: center;
     font-weight: 400;
     font-size: 25px;
+    color: white;
 }
 
 p {
@@ -35,6 +36,9 @@ body {
     margin-top: 50px;
     width: 50%;
     height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .drop {
@@ -47,9 +51,111 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
-.active{
+#divError {
+    display: none;
+}
+
+.div-error {
+    color: white;
+    text-align: center;
+    margin: auto;
+    height: 200px;
+    width: 70%;
+    background-color: #14151F;
+    border: white solid 1px;
+    border-radius: 5px;
+}
+
+.div-error button {
+    width: 30%;
+    background-color: #569b51;
+    margin-top: 20px;
+    border: none;
+    height: 35px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+}
+
+#listaArchivos {
+    display: flex;
+    flex-direction: column;
+}
+
+/* SUCCESS */
+#success{
+    display: none;
+
+}
+
+
+    .wrapper {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .checkmark__circle {
+        stroke-dasharray: 166;
+        stroke-dashoffset: 166;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+        stroke: #7ac142;
+        fill: none;
+        animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards
+    }
+
+    .checkmark {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: block;
+        stroke-width: 2;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        margin: 10% auto;
+        box-shadow: inset 0px 0px 0px #7ac142;
+        animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both
+    }
+
+    .checkmark__check {
+        transform-origin: 50% 50%;
+        stroke-dasharray: 48;
+        stroke-dashoffset: 48;
+        animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards
+    }
+
+    @keyframes stroke {
+        100% {
+            stroke-dashoffset: 0
+        }
+    }
+
+    @keyframes scale {
+
+        0%,
+        100% {
+            transform: none
+        }
+
+        50% {
+            transform: scale3d(1.1, 1.1, 1)
+        }
+    }
+
+    @keyframes fill {
+        100% {
+            box-shadow: inset 0px 0px 0px 30px #7ac142
+        }
+    }
+
+
+.active {
     filter: brightness(1.5);
     transition: 0.5s;
 }
@@ -72,7 +178,7 @@ body {
 
 /* BOTONES */
 /* Boton drop */
-.btn-drop{
+.btn-drop {
     width: 100%;
     background-color: #569b51;
     margin-top: 60px;
@@ -81,14 +187,16 @@ body {
     border-radius: 5px;
     color: white;
     font-weight: 400;
-} 
-   /* Boton Login */ 
+}
 
-   .icon-login{
+/* Boton Login */
+
+.icon-login {
     display: flex;
     margin: auto;
-   }
-   .btn-login{
+}
+
+.btn-login {
     background-color: var(--main-bg-color);
     border: solid white 1px;
     color: white;
@@ -104,7 +212,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.img-google{
-display: flex;
-justify-content: flex-start;
+.img-google {
+    display: flex;
+    justify-content: flex-start;
 }
