@@ -70,7 +70,6 @@ function processFile(file) {//validamos la imagen
         //mostrar error
         //alert('el archivo no es valido');
         error(true);
-        return
     }
 }
 
@@ -111,6 +110,7 @@ function error(estado) {
         document.getElementById("divError").style.display = "none";
         dragText.style.display = "block";
         dragText.textContent = ""
+        location.reload();
     }
 }
 
@@ -120,6 +120,7 @@ function subirArchivos() {
         document.getElementById("listaArchivos").style.display = "none";
         dragText.style.display = "none";
         document.getElementById("success").style.display = "block";
+
 
     } else {
         error(true);
