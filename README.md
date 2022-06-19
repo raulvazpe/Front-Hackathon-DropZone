@@ -12,13 +12,13 @@ Justo al lado tendremos un boton por ahora sin funcionalidad, en el que servirí
 ![](images/VistaPrevia/lista.png)
 ![](images/VistaPrevia/registro.png)
 ## Stack 
+<div align="center">
+<img src="images/VistaPrevia/html5.svg" width="100">
 
-Para este proyecto he utilizado:
- ·JS vanilla
- ·HTML5
- ·CSS3
- ·Google Fonts
+<img src="images/VistaPrevia/css.svg" width="150">
 
+<img src="images/VistaPrevia/javascript.svg" width="150">
+</div>
 ## Puntuación de Codefactor
 
 [![CodeFactor](https://www.codefactor.io/repository/github/raulvazpe/front-hackathon-dropzone/badge)](https://www.codefactor.io/repository/github/raulvazpe/front-hackathon-dropzone)
