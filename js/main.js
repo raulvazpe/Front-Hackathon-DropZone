@@ -21,32 +21,36 @@ input.addEventListener("change", (e) => {
 dropArea.addEventListener("dragover", (e) => { 
     e.preventDefault();
     dropArea.classList.add("active")
-    dragText.textContent = "Arrastra tus files aqui!"
+    dragText.textContent = "Suelta tus archivos!"
 
 })
 //Cuando arrastremos fuera de la zona
 dropArea.addEventListener("dragleave", (e) => { 
     e.preventDefault();
     dropArea.classList.remove("active");
-    dragText.textContent = "Arrastra tus files aqui!"
+    dragText.textContent = "Arrastra tus archivos aqui!"
 })
 
 //Cuando soltemos el archivo en la zona
 dropArea.addEventListener("drop", (e) => { 
     e.preventDefault();
     files = e.dataTransfer.files;
+    //tipo = file.type
+    //console.log(tipo)
     showFiles(files);
     dropArea.classList.remove("active");
-    dragText.textContent = "Arrastra tus files aqui!"
+    dragText.textContent = "Suelta tus archivos aqui!"
 
 })
 
 
 function showFiles(files) { //identificamos si es 1 imagen o hay varias
-    if (files.lenght < 2) {
-        processFile(files);
+    if (files.lenght === undefined) {
+        console.log('un archivo')
+        processFile(files); //procesa un archivo
     } else {
-        for (const file of files) {
+        for (const file of files) { //procesa el array
+            console.log('mas de uno')
             processFile(file);
         }
     }
@@ -54,14 +58,13 @@ function showFiles(files) { //identificamos si es 1 imagen o hay varias
 
 
 function processFile(file) {//validamos la imagen
-    const tipo = file.type;
-    const extensionesValidas = ['image/jpeg', 'image/jpg', 'image/png','image/gif'] ;
-
-    if(extensionesValidas.includes(tipo)){
+    const docType = file.type;
+    const validExtensions = ['image/jpeg', 'image/jpg', 'image/png','image/gif'] ;
+    if(validExtensions.includes(docType)){
         //archivo valido
     }else{
         //mostrar error
-        console.log(tipo);
+       
         alert('el archivo no es valido');
     }
  }
