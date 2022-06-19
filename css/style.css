@@ -137,8 +137,8 @@ body {
 color: white;
 
 }
-p spam{
-    color: green;
+.inicio-sesion p {
+    margin-bottom: 20px;
 }
 /*--------------------- BOTONES------------------------- */
 /* Boton drop */
@@ -353,8 +353,12 @@ p spam{
 
 
 .btn-login {
-
     background-size: 8%;
 
 }
-} 
+
+
+.inicio-sesion {
+    width: 80%;
+}
+}
