@@ -56,6 +56,8 @@ body {
     justify-content: center;
     overflow: hidden;
     border: white solid 1px;
+    animation: changeBg 1s infinite;
+    animation-duration: 7s;
 }
 
 
@@ -102,44 +104,83 @@ body {
 }
 
 .inicio-sesion h2 {
-    margin-bottom: 0;
-    margin-top: 30px;
+    margin-top: 30px ;
     font-size: 4vh;
+    color: #17C3B2;;
 }
 
-.inicio-sesion  label {
+.inicio-sesion p {
+    margin: 30px ;
     font-size: 2vh;
-    color: white;
-    width: 50%;
-    padding: 6px;
-    margin-top: 20px;
+    color: #17C3B2;
 }
-
-
-.inicio-sesion input {
-    background-color: var(--main-bg-color);
-    border: solid white 1px;
-    color: white;
-    width: 50%;
-    height: 4vh;
-    font-size: 13px;
-    border-radius: 5px;
-    text-align: left;
-    padding-left:10px;
+.inicio-sesion a {
+ color: #17C3B2;
+ font-size: 2.3vh;
 }
-.inicio-sesion input:hover {
-
-    transition: 0.5s;
-    -webkit-box-shadow: -2px -1px 50px -4px #528565;
-    box-shadow: -2px -1px 50px -4px #528565;
-}
-.inicio-sesion p {
-color: white;
-
-}
-.inicio-sesion p {
-    margin-bottom: 20px;
-}
+.form__group {
+    position: relative;
+    padding: 20px 0 0;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 180px;
+  }
+  
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #17C3B2;
+    outline: 0;
+    font-size: 17px;
+    color: #17C3B2;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .form__field::placeholder {
+    color: transparent;
+  }
+  
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #17C3B2;
+    pointer-events: none;
+  }
+  
+  .form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #17C3B2, #58e4d6);
+    border-image-slice: 1;
+  }
+  
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #17C3B2;
+    font-weight: 700;
+  }
+  
+  /* reset input */
+  .form__field:required, .form__field:invalid {
+    box-shadow: none;
+  }
 /*--------------------- BOTONES------------------------- */
 /* Boton drop */
 .btn-drop {
@@ -156,18 +197,46 @@ color: white;
 
  /* boton Inicio sesion */
 
-.btn-InicioSesion{
-    width: 50%;
-    background-color: #569b51;
-    margin-top: 30px;
-    border: none;
-    height: 35px;
-    border-radius: 5px;
-    color: white;
-    font-weight: 400;
-    font-size: 2.5vh;
-    cursor: pointer;
-}
+ .btn {
+    margin-top: 40px;
+    padding: 0.8em 1.8em;
+    border: 2px solid #17C3B2;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #17C3B2;
+   }
+   
+   .btn::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #17C3B2;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+    color: var(--main-bg-color);
+   }
+   
+   .btn:hover::before {
+    width: 105%;
+   }
+   
+   .btn:hover {
+    color: var(--main-bg-color);
+   }
+   
+
 
 /* Boton Login */
 
@@ -362,3 +431,122 @@ color: white;
     width: 80%;
 }
 }
+
+
+
+
+/* BOTONES ANIMADOS */
+
+/* From uiverse.io by @Cornerstone-04 */
+/* button {
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    outline: none;
+    border: 2px solid #0f0;
+    margin: 40px;
+    height: 60px;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #fff;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+    transition: 0.45s;
+    transition-delay: 0s;
+  }
+  
+  button:hover {
+    transition-delay: 1.5s;
+    color: #000;
+    box-shadow: 0 0 10px #0f0,
+                  0 0 20px #0f0,
+                  0 0 40px #0f0, 
+                  0 0 80px #0f0, 
+                  0 0 100px #0f0;
+  }
+  
+  button span {
+    position: relative;
+    z-index: 100;
+    font-size: 12px;
+  }
+  
+  button::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #0f0;
+    box-shadow: 5px -8px 0 #0f0, 
+                5px 8px 0 #0f0;
+    transition: width 0.5s, 
+                left 0.5s, 
+                height 0.5s, 
+                box-shadow 0.5s;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+  }
+  
+  button:hover::before {
+    width: 60%;
+    height: 100%;
+    /* right: -2px; */
+   /*  left: -2px;
+    box-shadow: 5px 0 0 #0f0, 
+                5px 0 0 #0f0;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+  }
+ 
+  button::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #0f0;
+    box-shadow: -5px -8px 0 #0f0, 
+                -5px 8px 0 #0f0;
+    transition: width 0.5s, right 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+  }
+  
+  button:hover::after {
+    width: 60%;
+    height: 102%;
+    right: -2px;
+    box-shadow: -5px 0 0 #0f0, -5px 0 0 #0f0;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+  }
+   */
+
+
+
+
+   @keyframes changeBg {
+    0%,
+       100% {
+         box-shadow: -2px -1px 50px -4px #47af6d;
+    }
+   
+    25% {
+     box-shadow: 0px 0px 40px 0px turquoise;
+     background-color: var(--main-bg-color);
+    }
+   
+    50% {
+     box-shadow: 0px 0px 40px 0px purple;
+     background-color: var(--main-bg-color);
+    }
+   
+    75% {
+     box-shadow: 0px 0px 40px 0px rgb(191, 204, 11);
+     background-color: var(--main-bg-color)
+    }
+   }
