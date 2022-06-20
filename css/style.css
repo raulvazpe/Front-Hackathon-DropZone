@@ -45,8 +45,8 @@ body {
 }
 
 .drop {
-    -webkit-box-shadow: -2px -1px 50px -4px #47af6d;
-    box-shadow: -2px -1px 50px -4px #47af6d;
+    -webkit-box-shadow:#17C3B2;
+    box-shadow:#17C3B2;
     background-image: url("../images/drop.png");
     background-size: cover;
     height: 350px;
@@ -93,8 +93,8 @@ body {
     width: 40%;
     border-radius: 5px;
     border: 1px solid white;
-    -webkit-box-shadow: -2px -1px 50px -4px #47af6d;
-    box-shadow: -2px -1px 50px -4px #47af6d;
+    -webkit-box-shadow: #17C3B2;
+    box-shadow: #17C3B2;
 
 }
 .inicio-sesion form{
@@ -106,7 +106,7 @@ body {
 .inicio-sesion h2 {
     margin-top: 30px ;
     font-size: 4vh;
-    color: #17C3B2;;
+    color: #17C3B2;
 }
 
 .inicio-sesion p {
