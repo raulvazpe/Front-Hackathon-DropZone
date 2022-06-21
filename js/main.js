@@ -126,3 +126,13 @@ function subirArchivos() {
         error(true);
     }
 }
+
+
+
+
+
+
+
+//FONDO JS
+
+
