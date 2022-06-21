@@ -216,12 +216,13 @@ body {
     font-family: inherit;
     color: #4eeede;
     border-radius: 5px;
+    cursor: pointer;
    }
    
    .btn::before {
     content: '';
     width: 0;
-    height: 300%;
+    height: 100vh;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -408,16 +409,22 @@ body {
     .container {
         width: 100%;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
 
+    }
+
+    .drop {
+        margin-top: 5vh;
+        height: 40vh;
     }
     
     .login {
         width: 80%;
-        margin-bottom: 45px;
-        margin-top: -34px;
-        height: 300px;
+    }
+
+    .login h2 {
+        margin-top: 18vh;
     }
 
     .container-drop{
@@ -431,6 +438,9 @@ body {
 
 }
 
+.btn{
+    margin-bottom: 5vh;
+}
 
 .inicio-sesion {
     width: 80%;

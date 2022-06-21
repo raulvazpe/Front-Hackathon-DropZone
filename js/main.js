@@ -1,4 +1,4 @@
-//const { getElement } = require("dropzone");
+
 const divError = document.querySelector("#divError");
 const dropArea = document.querySelector('.drop');
 const dragText = dropArea.querySelector('h2');
@@ -128,11 +128,5 @@ function subirArchivos() {
 }
 
 
-
-
-
-
-
-//FONDO JS
 
 
