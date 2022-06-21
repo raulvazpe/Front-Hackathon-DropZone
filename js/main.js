@@ -1,8 +1,8 @@
-
+//const { getElement } = require("dropzone");
 const divError = document.querySelector("#divError");
 const dropArea = document.querySelector('.drop');
 const dragText = dropArea.querySelector('h2');
-const button = document.querySelector('.btn-drop');
+const button = document.querySelector('#btn-drop');
 const input = dropArea.querySelector('#input-file');
 
 let files;
@@ -129,4 +129,9 @@ function subirArchivos() {
 
 
 
+
+
+
+
+//FONDO JS
 
