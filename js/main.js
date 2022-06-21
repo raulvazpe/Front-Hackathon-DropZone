@@ -7,7 +7,7 @@ const input = dropArea.querySelector('#input-file');
 
 let files;
 let archivo = false;
-
+dragText.innerHTML="Añade tus archivos aquí!"
 button.addEventListener('click', e => {
     console.log("click");
 });
@@ -120,10 +120,16 @@ function subirArchivos() {
         document.getElementById("listaArchivos").style.display = "none";
         dragText.style.display = "none";
         document.getElementById("success").style.display = "block";
+        setTimeout(() => {
+           location.reload();
+        }, 3000);
 
 
     } else {
-        error(true);
+        dragText.innerHTML="No hay archivos añadidos";
+        setTimeout(() => {
+            dragText.style.display = "none";
+        }, 3000);
     }
 }
 
