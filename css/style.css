@@ -47,8 +47,8 @@ body {
 }
 
 .drop {
-    -webkit-box-shadow: -2px -1px 50px -4px #17C3B2;
-    box-shadow: -2px -1px 50px -4px #17C3B2;
+    -webkit-box-shadow: -2px -1px 50px -4px #4eeede;
+    box-shadow: -2px -1px 50px -4px #4eeede;
     background-image: url("../images/drop.png");
     background-size: cover;
     height: 350px;
@@ -95,8 +95,8 @@ body {
     width: 40%;
     border-radius: 5px;
     border: 1px solid white;
-    -webkit-box-shadow: -2px -1px 50px -4px #17C3B2;
-    box-shadow: -2px -1px 50px -4px #17C3B2;
+    -webkit-box-shadow: -2px -1px 50px -4px #4eeede;
+    box-shadow: -2px -1px 50px -4px #4eeede;
     animation: changeBg 1s infinite;
     animation-duration: 7s;
 
@@ -110,16 +110,16 @@ body {
 .inicio-sesion h2 {
     margin-top: 30px ;
     font-size: 4vh;
-    color: #17C3B2;
+    color: #4eeede;
 }
 
 .inicio-sesion p {
     margin: 30px ;
     font-size: 2vh;
-    color: #17C3B2;
+    color: #4eeede;
 }
 .inicio-sesion a {
- color: #17C3B2;
+ color: #4eeede;
  font-size: 2.3vh;
 }
 .form__group {
@@ -134,10 +134,10 @@ body {
     font-family: inherit;
     width: 100%;
     border: none;
-    border-bottom: 2px solid #17C3B2;
+    border-bottom: 2px solid #4eeede;
     outline: 0;
     font-size: 17px;
-    color: #17C3B2;
+    color: #4eeede;
     padding: 7px 0;
     background: transparent;
     transition: border-color 0.2s;
@@ -159,7 +159,7 @@ body {
     display: block;
     transition: 0.2s;
     font-size: 17px;
-    color: #17C3B2;
+    color: #4eeede;
     pointer-events: none;
   }
   
@@ -167,7 +167,7 @@ body {
     padding-bottom: 6px;
     font-weight: 700;
     border-width: 3px;
-    border-image: linear-gradient(to right, #17C3B2, #58e4d6);
+    border-image: linear-gradient(to right, #4eeede, #58e4d6);
     border-image-slice: 1;
   }
   
@@ -177,7 +177,7 @@ body {
     display: block;
     transition: 0.2s;
     font-size: 17px;
-    color: #17C3B2;
+    color: #4eeede;
     font-weight: 700;
   }
   
@@ -189,7 +189,7 @@ body {
 /* Boton drop */
 .btn-drop {
     width: 100%;
-    background-color: #17C3B2;
+    background-color: #4eeede;
     margin-top: 60px;
     border: none;
     height: 38px;
@@ -204,7 +204,7 @@ body {
  .btn {
     margin-top: 40px;
     padding: 0.8em 1.8em;
-    border: 2px solid #17C3B2;
+    border: 2px solid #4eeede;
     position: relative;
     overflow: hidden;
     background-color: transparent;
@@ -214,7 +214,8 @@ body {
     transition: .3s;
     z-index: 1;
     font-family: inherit;
-    color: #17C3B2;
+    color: #4eeede;
+    border-radius: 5px;
    }
    
    .btn::before {
@@ -225,7 +226,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
-    background: #17C3B2;
+    background: #4eeede;
     transition: .5s ease;
     display: block;
     z-index: -1;
