@@ -75,23 +75,22 @@ function processFile(file) {//validamos la imagen
 
 //DIV LISTADO DE ARCHIVOS
 function listarArchivos(estado, nombre) {
+    //Si el estado es true significa que hay archivos, y añadiremos el nombre
     if (estado) {
-
-        // Create an "p" node:
-        const parrafo = document.createElement("p");
-
-        // Create a text node:
-        const text = document.createTextNode(nombre);
-
-        // Append the text node to the "p" node:
-        parrafo.appendChild(text);
-
-        // Append the "p" node to the list:
-        document.getElementById("listaArchivos").appendChild(parrafo);
-
         dragText.style.display = "none";
+        //creamos el elemento <p></p>
+        const parrafo = document.createElement("p");
+        // Create a text node:
+        const nombreArchivo = document.createTextNode(nombre);
+        // añadiremos el nimbre del archivo
+        parrafo.appendChild(nombreArchivo);
 
+        //Lo añadimos como hijo de <p></p>
+        document.getElementById("listaArchivos").appendChild(parrafo);
         document.getElementById("listaArchivos").style.color = "white";
+        
+
+
     } else {
         document.getElementById("listaArchivos").style.display = "none";
     }
@@ -134,10 +133,4 @@ function subirArchivos() {
 }
 
 
-
-
-
-
-
-//FONDO JS
 

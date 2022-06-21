@@ -110,7 +110,8 @@ body {
 .inicio-sesion h2 {
     margin-top: 30px ;
     font-size: 4vh;
-    color: #4eeede;
+    color: white;
+    font-weight: bold;
 }
 
 .inicio-sesion p {
@@ -214,7 +215,8 @@ body {
     transition: .3s;
     z-index: 1;
     font-family: inherit;
-    color: #4eeede;
+    color: white;
+    font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
    }
@@ -621,3 +623,10 @@ body {
       transform:translateX(25%);
     }
   }
+
+
+  /* DROPZONE */
+
+   #listaArchivos p{
+      font-size: 3vh;
+   }
