@@ -80,13 +80,18 @@ function listarArchivos(estado, nombre) {
         dragText.style.display = "none";
         //creamos el elemento <p></p>
         const parrafo = document.createElement("p");
+        const icono = document.createElement("i");
         // Create a text node:
         const nombreArchivo = document.createTextNode(nombre);
         // añadiremos el nimbre del archivo
         parrafo.appendChild(nombreArchivo);
+        icono.classList.add("fa-solid", "fa-images","iconoLista");
+        
 
         //Lo añadimos como hijo de <p></p>
+        
         document.getElementById("listaArchivos").appendChild(parrafo);
+        parrafo.appendChild(icono);
         document.getElementById("listaArchivos").style.color = "white";
         
 
