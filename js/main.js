@@ -4,6 +4,7 @@ const dropArea = document.querySelector('.drop');
 const dragText = dropArea.querySelector('h2');
 const button = document.querySelector('#btn-drop');
 const input = dropArea.querySelector('#input-file');
+const lista = dropArea.querySelector('#listaArchivos');
 
 let files;
 let archivo = false;
@@ -78,6 +79,7 @@ function listarArchivos(estado, nombre) {
     //Si el estado es true significa que hay archivos, y añadiremos el nombre
     if (estado) {
         dragText.style.display = "none";
+        lista.style.display = "flex";
         //creamos el elemento <p></p>
         const parrafo = document.createElement("p");
         const icono = document.createElement("i");
@@ -87,6 +89,11 @@ function listarArchivos(estado, nombre) {
         parrafo.appendChild(nombreArchivo);
         icono.classList.add("fa-solid", "fa-images","iconoLista");
         
+
+
+       // const image = document. createElement('img');
+      //  image. src = '../images/picture.png';
+        //document. querySelector('.container'). appendChild(image)
 
         //Lo añadimos como hijo de <p></p>
         
