@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="646336918949-hmnjco121li9jrii4askadtmi66kqqv5.apps.googleusercontent.com">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +42,7 @@
                     <p>No hemos podido subir tu archivo, revisa el formato o bien inténtalo de nuevo</p>
                     <button onclick="error(false)">Cerrar</button>
                 </div>
-                <input type="file" id="input-file" hidden multiple />
+                <input type="file" id="input-file" multiple />
             </div>
             <button id="btn-drop" class="btn" onclick="subirArchivos()"><span>Subir archivos</span> </button>
 
@@ -53,6 +54,8 @@
             <button class="btn-login "> <span>Login con Google</span> 
                 
             </button>
+
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
         </section>
 
     </div>
@@ -60,6 +63,7 @@
 
     </footer>
     <script src="https://kit.fontawesome.com/6f631b06d4.js" crossorigin="anonymous"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="../js/main.js"></script>
 </body>
 

@@ -415,6 +415,9 @@ body {
   border-radius: 5px;
 }
 
+#input-file{
+  display: none;
+}
 
 /* MEIDA QUIERIES */
 @media (max-width: 768px) {
@@ -425,6 +428,7 @@ body {
     align-items: center;
 
   }
+
 
   .drop {
     margin-top: 5vh;
