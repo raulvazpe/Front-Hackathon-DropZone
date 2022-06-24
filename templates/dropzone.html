@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-signin-client_id" content="646336918949-hmnjco121li9jrii4askadtmi66kqqv5.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content=646336918949-sjfpfupaoghl46rirf7p67o4qeg30sk1.apps.googleusercontent.com>
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,11 +51,14 @@
         <section class="login">
             <h2>Bienvenido a DDrop</h2>
             <p>Para subir tus archivos de forma simple a drive, puedes hacer Login a través de Google</p>
-            <button class="btn-login "> <span>Login con Google</span> 
+            <button class="g-signin2 btn-login" data-onsuccess="onSignIn">Login con Google</button>
+
+            <!-- <button class="btn-login "> <span>Login con Google</span>  -->
+                 
                 
             </button>
 
-            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+           
         </section>
 
     </div>
