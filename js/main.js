@@ -155,3 +155,9 @@ function onSignIn(googleUser) {
     console.log('Image URL: ' + profile.getImageUrl());
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
   }
+
+  window.gapi.load('client:auth2', () => {
+    window.gapi.client.init({
+        clientId: '646336918949-sjfpfupaoghl46rirf7p67o4qeg30sk1.apps.googleusercontent.com',
+        plugin_name: "chat"
+    })

@@ -51,7 +51,15 @@
         <section class="login">
             <h2>Bienvenido a DDrop</h2>
             <p>Para subir tus archivos de forma simple a drive, puedes hacer Login a través de Google</p>
-            <button class="g-signin2 btn-login" data-onsuccess="onSignIn">Login con Google</button>
+
+            <div id="g_id_onload"
+         data-client_id="646336918949-sjfpfupaoghl46rirf7p67o4qeg30sk1"
+         data-ux_mode="redirect"
+         data-login_uri="https://www.example.com/your_login_endpoint">
+    </div>
+    <div class="g_id_signin" data-type="standard"></div>
+
+            <!-- <div class="g-signin2 btn-login" data-onsuccess="onSignIn">Login con Google</div> -->
 
             <!-- <button class="btn-login "> <span>Login con Google</span>  -->
                  
@@ -65,8 +73,9 @@
     <footer>
 
     </footer>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="https://kit.fontawesome.com/6f631b06d4.js" crossorigin="anonymous"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!-- <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script> -->
     <script src="../js/main.js"></script>
 </body>
 
