@@ -168,8 +168,9 @@ function onSignIn(googleUser) {
             } catch (e) {
               return null;
             }
+
           };
-          console.log(token);
+          console.log(parseJwt(token));
         }
         window.onload = function () {
           google.accounts.id.initialize({
