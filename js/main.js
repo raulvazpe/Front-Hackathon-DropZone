@@ -155,3 +155,15 @@ function onSignIn(googleUser) {
     console.log('Image URL: ' + profile.getImageUrl());
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
   }
+
+
+//   LOGIN DE GOOGLE
+  google.accounts.id.initialize(IdConfiguration)
+
+  window.onload = function () {
+    google.accounts.id.initialize({
+      client_id: '646336918949-sjfpfupaoghl46rirf7p67o4qeg30sk1.apps.googleusercontent.com',
+      callback: handleCredentialResponse
+    });
+    google.accounts.id.prompt();
+  };
