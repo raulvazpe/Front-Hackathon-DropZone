@@ -161,6 +161,13 @@ function onSignIn(googleUser) {
 
         function handleCredentialResponse(response) {
           console.log("Encoded JWT ID token: " + response.credential);
+          const parseJwt = (token) => {
+            try {
+              return JSON.parse(atob(token.split('.')[1]));
+            } catch (e) {
+              return null;
+            }
+          
         }
         window.onload = function () {
           google.accounts.id.initialize({
@@ -171,5 +178,6 @@ function onSignIn(googleUser) {
             document.getElementById("buttonDiv"),
             { theme: "outline", size: "large" }  // customization attributes
           );
-          google.accounts.id.prompt(); // also display the One Tap dialog
+          //google.accounts.id.prompt(); // also display the One Tap dialog
         }
+
