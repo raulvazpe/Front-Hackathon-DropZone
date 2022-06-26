@@ -167,8 +167,9 @@ function onSignIn(googleUser) {
             } catch (e) {
               return null;
             }
-          
+          };
         }
+        
         window.onload = function () {
           google.accounts.id.initialize({
             client_id: "646336918949-sjfpfupaoghl46rirf7p67o4qeg30sk1.apps.googleusercontent.com",
