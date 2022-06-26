@@ -169,7 +169,7 @@ function onSignIn(googleUser) {
               return null;
             }
           };
-          console.log(parseJwt);
+          console.log(token);
         }
         window.onload = function () {
           google.accounts.id.initialize({
