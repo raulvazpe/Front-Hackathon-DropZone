@@ -5,6 +5,7 @@ const dragText = dropArea.querySelector('h2');
 const button = document.querySelector('#btn-drop');
 const input = dropArea.querySelector('#input-file');
 const lista = dropArea.querySelector('#listaArchivos');
+const loginGoogle = document.querySelector(".login")
 
 let files;
 let archivo = false;
@@ -170,6 +171,7 @@ function onSignIn(googleUser) {
             }
 
           };
+          loginGoogle.querySelector("h2").innerHTML="Bienvenido a DDrop"+parseJwt(token.name);
           console.log(parseJwt(token));
           console.log(parseJwt(token.name));
         }
