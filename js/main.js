@@ -171,6 +171,7 @@ function onSignIn(googleUser) {
 
           };
           console.log(parseJwt(token));
+          console.log(parseJwt(token.name));
         }
         window.onload = function () {
           google.accounts.id.initialize({
