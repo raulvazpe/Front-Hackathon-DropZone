@@ -161,6 +161,7 @@ function onSignIn(googleUser) {
 
         function handleCredentialResponse(response) {
           console.log("Encoded JWT ID token: " + response.credential);
+          let token = response.credential;
           const parseJwt = (token) => {
             try {
               return JSON.parse(atob(token.split('.')[1]));
@@ -168,8 +169,8 @@ function onSignIn(googleUser) {
               return null;
             }
           };
+          console.log(parseJwt);
         }
-        
         window.onload = function () {
           google.accounts.id.initialize({
             client_id: "646336918949-sjfpfupaoghl46rirf7p67o4qeg30sk1.apps.googleusercontent.com",
